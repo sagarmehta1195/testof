@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="stylesheet" href="./lib/w3schools32.css?v=1.0.1">
+   
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.7.1/dist/jquery.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"></script>
+ 
+   
+   <style>
+   .fixed{
+    position:fixed;
+    z-index:2;
+    background-color: #ffffff;
+    
+   }
+   .w3-bar, .w3-button {
+      white-space: normal;
+  }
+  .w3-bar ,.w3-bar-item {
+      padding: 2px 16px;
+      float: left;
+      width: auto;
+      border: none;
+      display: block;
+      outline: 0;
+  }
+  .w3-bar {
+    width: 100%;
+    overflow: hidden;
+}
+
+
+
+
+
+#top-nav-bar ,.tnb-right-section ,.w3-alt-btn, #top-nav-bar ,.tnb-right-section ,.w3-btn, #top-nav-bar, .tnb-right-section, .w3-button {
+    margin-right: 10px;
+    margin-left: 0;
+}
+
+  </style>
+    
+    <style>
+
+
+#subtopnav {
+        position:fixed;
+        background-color: #f3640c;
+        color:#f1f1f1;
+        padding:4px;
+        letter-spacing:1px;
+        font-family: 'Source Sans Pro Topnav', sans-serif;
+        font-size:0;
+        top:56px;
+        z-index:2;
+        width:100%;
+        white-space:nowrap;
+        overflow:auto;
+        scrollbar-width: none;
+      }
+      #subtopnav a{
+        display:inline-block;
+        width:auto;
+        margin:0!important;
+        padding:5px 15px 5px 15px !important;
+        font-size:15px!important;
+        text-decoration: none;  
+        line-height: 1.5;
+      }
+      #subtopnav a:hover,#subtopnav a:focus,#subtopnav a:active{
+        background-color:#000000 !important;
+        color:#ffffff !important;
+      }
+      #subtopnav a.active{
+        background-color: #04AA6D!important;
+        color:#fff!important;  
+      }
+      #btn_container_subtopnav {
+        position:fixed;
+        right:0; 
+        top:56px;
+        font-size:0;
+        border-left:10px solid rgba(40, 42, 53,0.5);
+        
+      }
+      #btn_container_subtopnav a{
+        line-height:1.3!important;
+        padding-top:7px!important;
+        padding-bottom:6px!important; 
+        font-size:15px;
+        background-color:#282A35;  
+      }
+    </style>
+    
+    <style>
+
+a {
+    color: inherit;
+}
+@media (max-width: 992px) and (min-width: 601px) {
+    .w3-hide-medium {
+        display: none !important;
+    }
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+
+      </style>  
+  
+ <style>
+ 
+ 
+ .bodyandbar{
+  
+  margin: 10px; 
+  
+  float: left;
+
+}
+
+/* .row{
+  
+  margin-bottom: 100px;
+
+} */
+#main{
+
+  margin-bottom: 110px;
+}
+ .sp{
+  margin-left: 20px;
+ }
+
+ .sk,.sk1{
+  margin-left: 30px;
+
+ }
+ </style> 
+<title>Page Title</title>
+</head>
+<body>
+    <div  class="container">
+
+
+   
+     
+    <img src="./lib/imag/icon.jpg" alt="xyz"    style="width: 120px;padding-bottom: 10px;float: left;height:70px ">
+    
+   
+    
+    
+
+    <div
+      id="tnb-google-search-container"
+      class="w3-bar-item "
+     
+    >
+    <div class="input-group mb-3 " style="margin-top: 8px; " >
+        <input
+       
+        style=" width:290px;height:20px"
+          id="tnb-google-search-input"
+          type="text"
+          class="form-control"
+          placeholder="Search Products & Brands"
+          autocomplete="off"
+          onkeydown="TopNavBar.googleSearchAttachKeyPressHandler(event)"
+          aria-label="Search field"
+          oninput="TopNavBar.searchWithSuggestions(this)"
+          onfocus="TopNavBar.searchWithSuggestions(this)"
+          onblur="TopNavBar.searchFieldLostFocus(event)"
+        />
+        <div class="input-group-append">
+           
+            <button class="btn " style="color:#f1f1f1;height:20px;background-color: #ea5d05;" type="submit">&#128269;Search</button> 
+          </div>
+    </div>
+    
+        </div>
+        <button class="w3-bar-item w3-button w3-hover-none ga-top ga-top-w3home" style="color:#f1f1f1;height:20px;background-color: #07d83b ;height: 40px; margin-left:350px;" type="submit">Cart(1)</button> 
+      </div>
+
+    </div>
+
+</div>
+
+
+<div id="subtopnav" onmousedown="startscrolling_subtopnav(event)" onmousemove="scrolling_subtopnav(event)" onmouseup="endscrolling_subtopnav(event)" onclick="return pellessii(event)">
+  <div id="scroll_left_btn" class="w3-hide-medium w3-hide-small">
+    <span onmousedown="scrollmenow(-1)" onmouseup="stopscrollmenow()" onmouseout="stopscrollmenow()">&nbsp;&nbsp;&nbsp;&#10094;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+  </div>
+  <div id="menubtn_container">
+    <span>
+        
+        <a href='javascript:void(0);' class='topnav-icons fa fa-menu w3-hide-large w3-hide-medium w3-hide-small w3-left w3-bar-item w3-button ga-nav' style="line-height:1.1;padding-top:3px!important;" onclick='open_menu()' title='Menu'></a>      
+        
+    </span>    
+    
+    
+
+
+ 
+  <a href="/html/default.asp" class="ga-nav  subtopnav_firstitem"  style="padding-left: 185px !important;" title="HTML Tutorial">HTML</a>
+  <a href="/css/default.asp" class="ga-nav" title="CSS Tutorial">CSS</a>
+  <a href="/js/default.asp" class="ga-nav" title="JavaScript Tutorial">JAVASCRIPT</a>
+  <a href="/sql/default.asp" class="ga-nav" title="SQL Tutorial">SQL</a>
+  <a href="/python/default.asp" class="ga-nav" title="Python Tutorial">PYTHON</a>
+  <a href="/java/default.asp" class="ga-nav" title="Java Tutorial">JAVA</a>
+  <a href="/php/default.asp" class="ga-nav" title="PHP Tutorial">PHP</a>
+  <a href="/howto/default.asp" class="ga-nav" title="How to">HOW TO</a>
+  <a href="/w3css/default.asp" class="ga-nav" title="W3.CSS Tutorial">W3.CSS</a>
+  <a href="/c/index.php" class="ga-nav" title="C Tutorial">C</a>
+  <a href="/cpp/default.asp" class="ga-nav" title="C++ Tutorial">C++</a>
+  <a href="/cs/index.php" class="ga-nav" title="C# Tutorial">C#</a>
+  <a href="/bootstrap/bootstrap_ver.asp" class="ga-nav" title="Bootstrap Tutorial" style="padding-right: 250px !important;">BOOTSTRAP</a>
+  <a href="/react/default.asp" class="ga-nav" title="React Tutorial"    >REACT</a>
+  <a href="/mysql/default.asp" class="ga-nav" title="MySQL Tutorial">MYSQL</a>
+  <a href="/jquery/default.asp" class="ga-nav" title="JQuery Tutorial">JQUERY</a>
+  <a href="/excel/index.php" class="ga-nav" title="Excel Tutorial">EXCEL</a>
+  <a href="/xml/default.asp" class="ga-nav" title="XML Tutorial">XML</a>
+  <a href="/django/index.php" class="ga-nav" title="Django Tutorial">DJANGO</a>
+  <a href="/python/numpy/default.asp" class="ga-nav" title="NumPy Tutorial">NUMPY</a>
+  <a href="/python/pandas/default.asp" class="ga-nav" title="Pandas Tutorial">PANDAS</a>
+  <a href="/nodejs/default.asp" class="ga-nav" title="Node.js Tutorial">NODEJS</a>
+  <a href="/r/default.asp" class="ga-nav" title="R Tutorial">R</a>
+  <a href="/typescript/index.php" class="ga-nav" title="TypeScript Tutorial">TYPESCRIPT</a>
+  <a href="/angular/default.asp" class="ga-nav" title="Angular.js Tutorial">ANGULAR</a>
+  <a href="/git/default.asp" class="ga-nav" title="Git Tutorial">GIT</a>
+  <a href="/postgresql/index.php" class="ga-nav" title="PostgreSQL Tutorial">POSTGRESQL</a>
+  <a href="/mongodb/index.php" class="ga-nav" title="MongoDB Tutorial">MONGODB</a>
+  <a href="/asp/default.asp" class="ga-nav" title="ASP Tutorial">ASP</a>
+  <a href="/ai/default.asp" class="ga-nav" title="A.I. Tutorial">AI</a>
+  <a href="/go/index.php" class="ga-nav" title="Go Tutorial">GO</a>
+  <a href="/kotlin/index.php" class="ga-nav" title="Kotlin Tutorial">KOTLIN</a>
+  <a href="/sass/default.asp" class="ga-nav" title="Sass Tutorial">SASS</a>
+  <a href="/vue/index.php" class="ga-nav" title="Vue.js Tutorial">VUE</a>
+  <a href="/dsa/index.php" class="ga-nav" title="DSA Tutorial">DSA</a>
+  <a href="/gen_ai/index.php" class="ga-nav" title="Gen A.I. Tutorial">GEN AI</a>
+  <a href="/python/scipy/index.php" class="ga-nav" title="SciPy Tutorial">SCIPY</a>
+  <a href="/aws/index.php" class="ga-nav" title="AWS Tutorial">AWS</a>
+  <a href="/cybersecurity/index.php" class="ga-nav" title="Cyber security Tutorial">CYBERSECURITY</a>
+  <a href="/datascience/default.asp" class="ga-nav" title="Data science Tutorial">DATA SCIENCE</a>
+  <a href="javascript:void(0)" style="width:50px;visibility:hidden;"></a>  
+  <div id="btn_container_subtopnav">
+    <div id="scroll_right_btn" class="w3-hide-medium w3-hide-small">
+      <span onmousedown="scrollmenow(1)" onmouseup="stopscrollmenow()" onmouseout="stopscrollmenow()">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&#10095;&nbsp;&nbsp;&nbsp;</span>
+    </div>
+  </div>
+
+  
+
+
+</div>
+
+</div>
+
+<div class="container"style="display: block;" >
+
+  <div class="row "  id="main">
+
+    <h1 style="display: none;">TREANDING PRODUCTS</h1>
+  </div>
+
+
+  <div class=""  id="main">
+
+ 
+</div>
+<div class="row">
+<div class="card  bodyandbar" style="width:20%" >
+      <img class="card-img-top" src="./lib/imag/OIP.jpg" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">John Doe</h4>
+        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+        <a href="#" class="btn btn-primary">See Profile</a>
+      </div>
+    </div>
+    <div class="card container bodyandbar" style="width:20%" >
+      <img class="card-img-top" src="./lib/imag/OIP.jpg" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">John Doe</h4>
+        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+        <a href="#" class="btn btn-primary">See Profile</a>
+      </div>
+    </div>
+    <div class="card container bodyandbar" style="width:20%" >
+      <img class="card-img-top" src="./lib/imag/OIP.jpg" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">John Doe</h4>
+        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+        <a href="#" class="btn btn-primary">See Profile</a>
+      </div>
+    </div> <div class="card container bodyandbar" style="width:20%" >
+      <img class="card-img-top" src="./lib/imag/OIP.jpg" alt="Card image" style="width:100%">
+      <div class="card-body">
+        <h4 class="card-title">John Doe</h4>
+        <p class="card-text">Some example text some example text. John Doe is an architect and engineer</p>
+        <a href="#" class="btn btn-primary">See Profile</a>
+      </div>
+    </div>
+  </div>
+</div>
+  </div>
+
+
+
+
+
+</body>
+</html>
+
+
